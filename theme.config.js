@@ -1,10 +1,11 @@
+import Logo from './components/logo'
 export default {
   github: 'https://github.com/surf0/wiki',
   docsRepositoryBase: 'https://github.com/surf0/wiki',
   titleSuffix: ' – surf0 wiki',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">surf0</span>
+      <span className="mr-2 font-extrabold hidden md:inline"><Logo width="70px"/></span>
       <span className="text-gray-600 font-normal hidden md:inline">
         wiki
       </span>
