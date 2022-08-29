@@ -4,9 +4,9 @@ export default {
   titleSuffix: ' – surf0 wiki',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">surf0 wiki</span>
+      <span className="mr-2 font-extrabold hidden md:inline">surf0</span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        surf0 wiki
+        wiki
       </span>
     </>
   ),
@@ -57,5 +57,5 @@ export default {
   footer: true,
   footerEditLink: 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © surf0.</>,
-  unstable_faviconGlyph: '👋',
+  // unstable_faviconGlyph: '👋',
 }
