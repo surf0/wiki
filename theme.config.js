@@ -56,7 +56,8 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
+  floatTOC: true,
+  defaultMenuCollapsed: true,
   footerEditLink: 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © surf0.</>,
-  // unstable_faviconGlyph: '👋',
 }
