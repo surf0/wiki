@@ -68,7 +68,7 @@ export default {
   },
   
   editLink: {text:'Edit this page on GitHub'},
-  footer: {text: <>MIT {new Date().getFullYear()} © surf0.</>},
+  footer: {component: <center style={{padding: 20}}>MIT {new Date().getFullYear()} © surf0</center>},
   projectChat: {
     link: 'https://discord.gg/gNUsvEuZ3d',
   },
