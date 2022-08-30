@@ -7,6 +7,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 
+import maps from '../data/maps'
+
 function secondsToDHM(seconds) {
   var d = Math.floor(seconds / (3600 * 24))
   var h = Math.floor((seconds % (3600 * 24)) / 3600)
@@ -25,13 +27,14 @@ export function useMounted() {
 }
 
 const Maps = () => {
-  const rows = []
+  const rows = Object.values(maps)
 
   const columns = [
     {
       field: 'name',
       headerName: 'Name',
       width: 250,
+
       renderCell: (params) => (
         <strong>
           <Link href={'/map/' + params.value}>{params.value}</Link>
@@ -40,15 +43,7 @@ const Maps = () => {
     },
     { field: 'tier', headerName: 'Tier' },
 
-    { field: 'b_count', headerName: 'Bonuses' },
-    { field: 'cp_count', headerName: 'Stages / CPs', width: 150 },
-    { field: 'maptype', headerName: 'Map type' },
-    {
-      field: 'created',
-      headerName: 'Created',
-      width: 150,
-      valueFormatter: ({ value }) => value.toDateString(),
-    },
+    { field: 'mapper', headerName: 'Mapper', width: 200 },
   ]
 
   const { theme, setTheme, systemTheme } = useTheme()
@@ -61,8 +56,6 @@ const Maps = () => {
     },
   })
 
-  console.log(renderedTheme)
-
   return (
     <center>
       {mounted && (
@@ -74,6 +67,7 @@ const Maps = () => {
                   rows={rows}
                   columns={columns}
                   components={{ Toolbar: GridToolbar }}
+                  getRowId={(row) => row.name}
                   componentsProps={{
                     toolbar: {
                       showQuickFilter: true,
