@@ -34,8 +34,8 @@ for i in range(17):
                 player = title[-1]
                 video_id = video['snippet']['resourceId']['videoId']
                 desc = video['snippet']['description']
-                if 'Server: [KSFclan.com]' in desc:
-                    last = desc.find('Server: [KSFclan.com]')
+                if 'Server: [KSF' in desc:
+                    last = desc.find('Server: [KSF')
                 else:
                     last = desc.rfind('surf.ksfclan.com')
                 text = desc[desc.find('[Surf Timer]'):last]
