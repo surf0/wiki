@@ -1,8 +1,11 @@
 {
   "index": "Home",
   "how-to": "How to Surf",
-  "servers": "Servers",
   "css": "CS:S",
   "csgo": "CS:GO",
-  "maps": "Maps"
+  "maps": "Maps",
+  "map": {
+    "title": "map",
+    "hidden": true
+  }
 }

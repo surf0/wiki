@@ -52,12 +52,28 @@ export default {
       />
     </>
   ),
-  search: true,
-  prevLinks: true,
-  nextLinks: true,
-  footer: true,
-  // floatTOC: true,
-  defaultMenuCollapsed: true,
-  footerEditLink: 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © surf0.</>,
+  navigation: {
+    next: true,
+    prev: true,
+  },
+  toc: {
+    float: true,
+  },
+  sidebar : {
+    defaultMenuCollapsed: true,
+  },
+
+  search: {
+    placeholder: "Search..."
+  },
+  
+  editLink: {text:'Edit this page on GitHub'},
+  footer: {text: <>MIT {new Date().getFullYear()} © surf0.</>},
+  projectChat: {
+    link: 'https://discord.gg/gNUsvEuZ3d',
+  },
+
+  i18n: [
+    { locale: "en-US", text: "English" },
+  ],
 }
