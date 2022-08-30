@@ -56,7 +56,7 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  floatTOC: true,
+  // floatTOC: true,
   defaultMenuCollapsed: true,
   footerEditLink: 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © surf0.</>,
