@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
-import Link from '@mui/material/Link'
+import { Button } from '@mui/material'
 import { useTheme } from 'next-themes'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 
 import maps from '../data/maps'
+
+import CustomizedDialogs from './map'
 
 export function useMounted() {
   const [mounted, setMounted] = useState(false)
@@ -20,6 +21,17 @@ export function useMounted() {
 }
 
 const Maps = () => {
+  const [modal, setModal] = useState({ show: false, map: null })
+
+  const openModal = (mapname) => {
+    console.log(maps[mapname])
+    setModal({ show: true, map: maps[mapname] })
+  }
+
+  const handleClose = () => {
+    setModal({ show: false, data: '' })
+  }
+
   const rows = Object.values(maps)
 
   const columns = [
@@ -29,9 +41,9 @@ const Maps = () => {
       width: 250,
 
       renderCell: (params) => (
-        <strong>
-          <Link href={'/map/' + params.value}>{params.value}</Link>
-        </strong>
+        <Button variant="text" onClick={() => openModal(params.value)}>
+          {params.value}
+        </Button>
       ),
     },
     { field: 'tier', headerName: 'Tier' },
@@ -53,6 +65,11 @@ const Maps = () => {
     <center>
       {mounted && (
         <ThemeProvider theme={muitheme}>
+          <CustomizedDialogs
+            handleClose={handleClose}
+            show={modal.show}
+            map={modal.map}
+          />
           <Box sx={{ maxWidth: 'xl' }}>
             <Box sx={{ height: 800, width: 1 }}>
               <DataGrid
