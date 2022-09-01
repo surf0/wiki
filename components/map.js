@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
-import { styled } from '@mui/material/styles'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
 import DialogContent from '@mui/material/DialogContent'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
-import Typography from '@mui/material/Typography'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import PersonIcon from '@mui/icons-material/Person'
@@ -76,7 +74,7 @@ const CustomizedDialogs = (props) => {
               <img
                 src={
                   'https://raw.githubusercontent.com/Sayt123/SurfMapPics/Maps-and-bonuses/csgo/' +
-                  map.name +
+                  map.goname +
                   '.jpg'
                 }
                 alt={map.name}
@@ -95,7 +93,7 @@ const CustomizedDialogs = (props) => {
                 <h2 class="text-3xl">Records</h2>
                 <Button
                   variant="contained"
-                  href={'https://surfheaven.eu/map/' + map.name}
+                  href={'https://surfheaven.eu/map/' + map.goname}
                   target="_blank"
                   rel="noopener"
                 >

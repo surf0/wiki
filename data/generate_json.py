@@ -12,6 +12,7 @@ with open('data/maps.csv') as csv_file:
             "_csgo").removesuffix("_fix")
         maps[mapname] = {
             "name": mapname,
+            "goname": row[0],
             "tier": row[1],
             "mapper": row[2],
             "wr": {},
@@ -42,6 +43,7 @@ for i in range(17):
                 else:
                     last = desc.rfind('surf.ksfclan.com')
                 text = desc[desc.find('[Surf Timer]'):last]
+                text = text.replace("\n", "<br>")
 
                 mapkey = difflib.get_close_matches(mapname, maps.keys())[0]
 
