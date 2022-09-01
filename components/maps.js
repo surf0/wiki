@@ -24,7 +24,6 @@ const Maps = () => {
   const [modal, setModal] = useState({ show: false, map: null })
 
   const openModal = (mapname) => {
-    console.log(maps[mapname])
     setModal({ show: true, map: maps[mapname] })
   }
 

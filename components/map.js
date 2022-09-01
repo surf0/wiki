@@ -50,7 +50,6 @@ export async function getStaticProps() {
 }
 
 const CustomizedDialogs = (props) => {
-  console.log(props.map)
   const map = props.map
 
   return (
