@@ -1,4 +1,5 @@
-import React from 'react'
+import * as React from 'react'
+
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Dialog from '@mui/material/Dialog'
@@ -90,7 +91,7 @@ const CustomizedDialogs = (props) => {
               </Box>
 
               <Box sx={{ padding: 2 }}>
-                <h2 class="text-3xl">Records</h2>
+                <h2 className="text-3xl">Records</h2>
                 <Button
                   variant="contained"
                   href={'https://surfheaven.eu/map/' + map.goname}
@@ -102,7 +103,7 @@ const CustomizedDialogs = (props) => {
               </Box>
               {map.howto !== '' && (
                 <Box sx={{ padding: 2 }}>
-                  <h2 class="text-3xl">How to Video</h2>
+                  <h2 className="text-3xl">How to Video</h2>
                   <iframe
                     width="100%"
                     height="430"
@@ -115,7 +116,7 @@ const CustomizedDialogs = (props) => {
               )}
               {Object.keys(map.wr).length !== 0 && (
                 <Box sx={{ padding: 2 }}>
-                  <h2 class="text-3xl">WR</h2>
+                  <h2 className="text-3xl">WR</h2>
                   <Card sx={{ margin: 2, padding: 2 }}>
                     <PersonIcon /> Surfed by {map.wr.player}
                   </Card>
@@ -127,7 +128,9 @@ const CustomizedDialogs = (props) => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                  <Card sx={{ margin: 2, padding: 2 }}>{map.wr.info}</Card>
+                  <Card sx={{ margin: 2, padding: 2, whiteSpace: 'pre-wrap' }}>
+                    {map.wr.info}
+                  </Card>
                 </Box>
               )}
             </Box>

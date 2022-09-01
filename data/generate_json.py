@@ -43,7 +43,6 @@ for i in range(17):
                 else:
                     last = desc.rfind('surf.ksfclan.com')
                 text = desc[desc.find('[Surf Timer]'):last]
-                text = text.replace("\n", "<br>")
 
                 mapkey = difflib.get_close_matches(mapname, maps.keys())[0]
 
