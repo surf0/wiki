@@ -116,6 +116,30 @@ const CustomizedDialogs = (props) => {
                 <Button
                   variant="contained"
                   href={
+                    'https://vibez-clan.de/timer66/index.php?style=0&map=' +
+                    map.goname
+                  }
+                  target="_blank"
+                  rel="noopener"
+                  sx={{ margin: 1 }}
+                >
+                  vibez66
+                </Button>
+                <Button
+                  variant="contained"
+                  href={
+                    'https://vibez-clan.de/timer66/index.php?style=0&map=' +
+                    map.goname
+                  }
+                  target="_blank"
+                  rel="noopener"
+                  sx={{ margin: 1 }}
+                >
+                  vibez100
+                </Button>
+                <Button
+                  variant="contained"
+                  href={
                     'https://surf0.net/dashboard-maps.php?map=' + map.goname
                   }
                   target="_blank"
