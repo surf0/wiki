@@ -96,8 +96,33 @@ const CustomizedDialogs = (props) => {
                   href={'https://surfheaven.eu/map/' + map.goname}
                   target="_blank"
                   rel="noopener"
+                  sx={{ margin: 1 }}
                 >
                   Surfheaven
+                </Button>
+
+                <Button
+                  variant="contained"
+                  href={
+                    'https://www.surfcentralstation.com/stats/dashboard-maps.php?map=' +
+                    map.goname
+                  }
+                  target="_blank"
+                  rel="noopener"
+                  sx={{ margin: 1 }}
+                >
+                  Surf Central Station
+                </Button>
+                <Button
+                  variant="contained"
+                  href={
+                    'https://surf0.net/dashboard-maps.php?map=' + map.goname
+                  }
+                  target="_blank"
+                  rel="noopener"
+                  sx={{ margin: 1 }}
+                >
+                  surf0
                 </Button>
               </Box>
               {map.howto !== '' && (
