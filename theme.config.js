@@ -64,7 +64,7 @@ export default {
   },
 
   search: {
-    placeholder: "Search..."
+    placeholder: 'Search ("/" to focus)'
   },
   
   editLink: {text:'Edit this page on GitHub'},
