@@ -22,7 +22,7 @@ with open('data/maps.csv') as csv_file:
 # add how to
 with open(f'data/howto.json', 'r') as f:
     data = json.load(f)
-    for key in data.keys():
+    for key in data:
         maps[key]["howto"] = data[key]
 
 
@@ -52,6 +52,15 @@ for i in range(17):
                         "video_id": video_id,
                         "info": text
                     }
+
+
+# fix wr video swaps {from:to}
+with open(f'data/wrswaps.json', 'r') as f:
+    data = json.load(f)
+    for key, value in data.items():
+        wr = maps[key]["wr"]
+        maps[key]["wr"] = {}
+        maps[value]["wr"] = wr
 
 
 with open(f'data/maps.json', 'w') as f:

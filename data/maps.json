@@ -1120,11 +1120,7 @@
         "goname": "surf_beginner_h",
         "tier": "2",
         "mapper": "N/A",
-        "wr": {
-            "player": "synki",
-            "video_id": "e2-1LCRRtB0",
-            "info": "[Surf Timer] - Eatnerdz finished in 00:52:25 (WR -00:00:46). Improving by 00:00:52\n[Surf Timer] - Eatnerdz beat the map record! Rank: 1/552\n\n"
-        },
+        "wr": {},
         "howto": ""
     },
     "surf_beginner_hell_ksf": {
@@ -1132,7 +1128,11 @@
         "goname": "surf_beginner_hell_ksf",
         "tier": "4",
         "mapper": "dotone",
-        "wr": {},
+        "wr": {
+            "player": "synki",
+            "video_id": "e2-1LCRRtB0",
+            "info": "[Surf Timer] - Eatnerdz finished in 00:52:25 (WR -00:00:46). Improving by 00:00:52\n[Surf Timer] - Eatnerdz beat the map record! Rank: 1/552\n\n"
+        },
         "howto": ""
     },
     "surf_beginner_lin": {
